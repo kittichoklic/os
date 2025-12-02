@@ -1,0 +1,16 @@
+{
+  "name": "os-educational-site",
+  "version": "1.0.0",
+  "description": "Educational site about Hackintosh, Bootable USB, Ventoy, and Linux Distros.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "deploy": "gh-pages -d ."
+  },
+  "author": "nathee",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.0.0",
+    "serve": "^14.0.1"
+  }
+}
