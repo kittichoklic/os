@@ -1,0 +1,17 @@
+# How To Install Arch Linux
+
+## Wi-Fi:
+
+iwctl                           # Enter interactive mode
+device list                     # Find your device (e.g., wlan0)
+station wlan0 scan              # Scan for networks
+station wlan0 get-networks      # List networks
+station wlan0 connect SSID      # Replace SSID with your network name
+exit                            # Type exit to leave
+
+pacman -Sy                      # ซิงค์ฐานข้อมูลแพ็กเกจเพื่อให้ระบบของคุณทราบเกี่ยวกับแพ็กเกจล่าสุดที่มีอยู่ในมิเรอร์
+pacman -S archlinux-keyring archinstall # archlinux-keyring: อัปเดตคีย์ PGP หากคุณไม่ทำเช่นนี้ คุณมักจะได้รับข้อผิดพลาด "signature is unknown trust" หรือ "package corrupted" เมื่อพยายามติดตั้งบางอย่าง
+                                # archinstall: อัปเดตสคริปต์ติดตั้ง เวอร์ชันล่าสุดมักจะมีการแก้ไขข้อบกพร่องที่สำคัญและคุณสมบัติใหม่ๆ (เช่น การแบ่งพาร์ติชันดิสก์ที่ดีขึ้นหรือโปรไฟล์ตัวจัดการหน้าต่าง) ที่เวอร์ชัน ISO ไม่มี
+lsblk                           # ดู HDD
+gdisk /dev/sda                  # สร้างรูปแบบ HDD เป็น GPT โดยจะมีพร้อมต์ขึ้นมาให้ใส่ x และ z
+archinstall                     # ติดตั้ง archlinux
